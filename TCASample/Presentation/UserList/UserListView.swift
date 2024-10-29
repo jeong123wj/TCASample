@@ -23,7 +23,7 @@ struct UserListView: View {
                         Spacer()
                         
                         Button {
-                            self.store.send(.followButtonTapped(userId: user.id))
+                            self.store.send(.followButtonTapped(user: user))
                         } label: {
                             if user.isFollowing {
                                 FollowingText()

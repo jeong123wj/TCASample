@@ -10,6 +10,7 @@ import ComposableArchitecture
 @Reducer
 struct UserListFeature {
     let fetchUserListUseCase = FetchUserListUseCase(userRepository: MockUserRepository())
+    let updateFollowUseCase = UpdateFollowUseCase(userRepository: MockUserRepository())
     
     @ObservableState
     struct State: Equatable {
@@ -19,7 +20,8 @@ struct UserListFeature {
     enum Action {
         case viewAppear
         case fetchUserListResponse(userList: [User])
-        case followButtonTapped(userId: String)
+        case followButtonTapped(user: User)
+        case followResponse(updateFollowResult: UpdateFollowResult)
     }
     
     var body: some Reducer<State, Action> {
@@ -35,10 +37,16 @@ struct UserListFeature {
                 state.userArray = userList
                 return .none
                 
-            case let .followButtonTapped(userId):
-                if let index = state.userArray.firstIndex(where: { $0.id == userId }) {
+            case let .followButtonTapped(user):
+                return .run { send in
+                    let updateFollowResult = try await self.updateFollowUseCase.execute(userId: user.id, isFollowing: !user.isFollowing)
+                    await send(.followResponse(updateFollowResult: updateFollowResult))
+                }
+                
+            case let .followResponse(updateFollowResult):
+                if let index = state.userArray.firstIndex(where: { $0.id == updateFollowResult.id }) {
                     let user = state.userArray[index]
-                    state.userArray[index] = User(id: user.id, name: user.name, image: user.image, isFollowing: !user.isFollowing)
+                    state.userArray[index] = User(id: user.id, name: user.name, image: user.image, isFollowing: updateFollowResult.isFollowing)
                 }
                 return .none
             }

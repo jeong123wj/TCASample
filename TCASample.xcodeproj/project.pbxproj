@@ -21,6 +21,8 @@
 		F17DB44F2CCE2FF7009E2CC4 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB44E2CCE2FF7009E2CC4 /* UserListView.swift */; };
 		F17DB4512CCE30CF009E2CC4 /* UserListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4502CCE30CF009E2CC4 /* UserListFeature.swift */; };
 		F17DB4572CD0F9EA009E2CC4 /* SwiftUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4562CD0F9EA009E2CC4 /* SwiftUI+Extension.swift */; };
+		F17DB45A2CD1564F009E2CC4 /* UpdateFollowUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4592CD1564F009E2CC4 /* UpdateFollowUseCase.swift */; };
+		F17DB45C2CD188C0009E2CC4 /* UpdateFollowResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB45B2CD188C0009E2CC4 /* UpdateFollowResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		F17DB44E2CCE2FF7009E2CC4 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		F17DB4502CCE30CF009E2CC4 /* UserListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListFeature.swift; sourceTree = "<group>"; };
 		F17DB4562CD0F9EA009E2CC4 /* SwiftUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extension.swift"; sourceTree = "<group>"; };
+		F17DB4592CD1564F009E2CC4 /* UpdateFollowUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFollowUseCase.swift; sourceTree = "<group>"; };
+		F17DB45B2CD188C0009E2CC4 /* UpdateFollowResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFollowResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F17DB4442CCCD808009E2CC4 /* User.swift */,
+				F17DB45B2CD188C0009E2CC4 /* UpdateFollowResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				F17DB4462CCCD88E009E2CC4 /* FetchUserListUseCase.swift */,
+				F17DB4592CD1564F009E2CC4 /* UpdateFollowUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -359,12 +365,14 @@
 			files = (
 				F17DB44F2CCE2FF7009E2CC4 /* UserListView.swift in Sources */,
 				F17DB44B2CCCD9C7009E2CC4 /* MockUserRepository.swift in Sources */,
+				F17DB45C2CD188C0009E2CC4 /* UpdateFollowResult.swift in Sources */,
 				F17DB4102CCCD287009E2CC4 /* TCASampleApp.swift in Sources */,
 				F17DB4452CCCD808009E2CC4 /* User.swift in Sources */,
 				F17DB4492CCCD9A8009E2CC4 /* UserRepository.swift in Sources */,
 				F17DB4572CD0F9EA009E2CC4 /* SwiftUI+Extension.swift in Sources */,
 				F17DB4472CCCD88E009E2CC4 /* FetchUserListUseCase.swift in Sources */,
 				F17DB4512CCE30CF009E2CC4 /* UserListFeature.swift in Sources */,
+				F17DB45A2CD1564F009E2CC4 /* UpdateFollowUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

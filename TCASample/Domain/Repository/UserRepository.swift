@@ -9,4 +9,5 @@ import Foundation
 
 protocol UserRepository {
     func fetchUserList() async throws -> [User]
+    func updateFollow(userId: String, isFollowing: Bool) async throws -> UpdateFollowResult
 }
