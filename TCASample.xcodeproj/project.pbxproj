@@ -23,6 +23,8 @@
 		F17DB4572CD0F9EA009E2CC4 /* SwiftUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4562CD0F9EA009E2CC4 /* SwiftUI+Extension.swift */; };
 		F17DB45A2CD1564F009E2CC4 /* UpdateFollowUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4592CD1564F009E2CC4 /* UpdateFollowUseCase.swift */; };
 		F17DB45C2CD188C0009E2CC4 /* UpdateFollowResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB45B2CD188C0009E2CC4 /* UpdateFollowResult.swift */; };
+		F17DB4612CD19E2B009E2CC4 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = F17DB4602CD19E2B009E2CC4 /* Swinject */; };
+		F17DB4632CD19E2B009E2CC4 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F17DB4622CD19E2B009E2CC4 /* Swinject-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17DB4632CD19E2B009E2CC4 /* Swinject-Dynamic in Frameworks */,
 				F17DB43C2CCCD50E009E2CC4 /* ComposableArchitecture in Frameworks */,
+				F17DB4612CD19E2B009E2CC4 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +249,8 @@
 			name = TCASample;
 			packageProductDependencies = (
 				F17DB43B2CCCD50E009E2CC4 /* ComposableArchitecture */,
+				F17DB4602CD19E2B009E2CC4 /* Swinject */,
+				F17DB4622CD19E2B009E2CC4 /* Swinject-Dynamic */,
 			);
 			productName = TCASample;
 			productReference = F17DB40C2CCCD287009E2CC4 /* TCASample.app */;
@@ -320,6 +326,7 @@
 			mainGroup = F17DB4032CCCD287009E2CC4;
 			packageReferences = (
 				F17DB43A2CCCD50E009E2CC4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				F17DB45F2CD19E2A009E2CC4 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = F17DB40D2CCCD287009E2CC4 /* Products */;
 			projectDirPath = "";
@@ -706,6 +713,14 @@
 				version = 1.15.2;
 			};
 		};
+		F17DB45F2CD19E2A009E2CC4 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = exactVersion;
+				version = 2.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -713,6 +728,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F17DB43A2CCCD50E009E2CC4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		F17DB4602CD19E2B009E2CC4 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F17DB45F2CD19E2A009E2CC4 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		F17DB4622CD19E2B009E2CC4 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F17DB45F2CD19E2A009E2CC4 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
