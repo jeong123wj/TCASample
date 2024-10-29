@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F17DB4102CCCD287009E2CC4 /* TCASampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB40F2CCCD287009E2CC4 /* TCASampleApp.swift */; };
-		F17DB4122CCCD287009E2CC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4112CCCD287009E2CC4 /* ContentView.swift */; };
 		F17DB4142CCCD289009E2CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17DB4132CCCD289009E2CC4 /* Assets.xcassets */; };
 		F17DB4172CCCD289009E2CC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17DB4162CCCD289009E2CC4 /* Preview Assets.xcassets */; };
 		F17DB4212CCCD289009E2CC4 /* TCASampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4202CCCD289009E2CC4 /* TCASampleTests.swift */; };
@@ -19,6 +18,9 @@
 		F17DB4472CCCD88E009E2CC4 /* FetchUserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4462CCCD88E009E2CC4 /* FetchUserListUseCase.swift */; };
 		F17DB4492CCCD9A8009E2CC4 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4482CCCD9A8009E2CC4 /* UserRepository.swift */; };
 		F17DB44B2CCCD9C7009E2CC4 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB44A2CCCD9C7009E2CC4 /* MockUserRepository.swift */; };
+		F17DB44F2CCE2FF7009E2CC4 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB44E2CCE2FF7009E2CC4 /* UserListView.swift */; };
+		F17DB4512CCE30CF009E2CC4 /* UserListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4502CCE30CF009E2CC4 /* UserListFeature.swift */; };
+		F17DB4572CD0F9EA009E2CC4 /* SwiftUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4562CD0F9EA009E2CC4 /* SwiftUI+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,6 @@
 /* Begin PBXFileReference section */
 		F17DB40C2CCCD287009E2CC4 /* TCASample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCASample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17DB40F2CCCD287009E2CC4 /* TCASampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASampleApp.swift; sourceTree = "<group>"; };
-		F17DB4112CCCD287009E2CC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F17DB4132CCCD289009E2CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17DB4162CCCD289009E2CC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F17DB41C2CCCD289009E2CC4 /* TCASampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCASampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +55,9 @@
 		F17DB4462CCCD88E009E2CC4 /* FetchUserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserListUseCase.swift; sourceTree = "<group>"; };
 		F17DB4482CCCD9A8009E2CC4 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		F17DB44A2CCCD9C7009E2CC4 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		F17DB44E2CCE2FF7009E2CC4 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		F17DB4502CCE30CF009E2CC4 /* UserListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListFeature.swift; sourceTree = "<group>"; };
+		F17DB4562CD0F9EA009E2CC4 /* SwiftUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F17DB40F2CCCD287009E2CC4 /* TCASampleApp.swift */,
-				F17DB4112CCCD287009E2CC4 /* ContentView.swift */,
+				F17DB44C2CCE2F8C009E2CC4 /* Presentation */,
 				F17DB43E2CCCD6F0009E2CC4 /* Domain */,
 				F17DB43D2CCCD6EB009E2CC4 /* Data */,
 				F17DB4132CCCD289009E2CC4 /* Assets.xcassets */,
@@ -189,6 +193,32 @@
 				F17DB44A2CCCD9C7009E2CC4 /* MockUserRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		F17DB44C2CCE2F8C009E2CC4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F17DB44D2CCE2F9E009E2CC4 /* UserList */,
+				F17DB4582CD0F9F8009E2CC4 /* Extension */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F17DB44D2CCE2F9E009E2CC4 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				F17DB44E2CCE2FF7009E2CC4 /* UserListView.swift */,
+				F17DB4502CCE30CF009E2CC4 /* UserListFeature.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		F17DB4582CD0F9F8009E2CC4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F17DB4562CD0F9EA009E2CC4 /* SwiftUI+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,12 +357,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17DB44F2CCE2FF7009E2CC4 /* UserListView.swift in Sources */,
 				F17DB44B2CCCD9C7009E2CC4 /* MockUserRepository.swift in Sources */,
-				F17DB4122CCCD287009E2CC4 /* ContentView.swift in Sources */,
 				F17DB4102CCCD287009E2CC4 /* TCASampleApp.swift in Sources */,
 				F17DB4452CCCD808009E2CC4 /* User.swift in Sources */,
 				F17DB4492CCCD9A8009E2CC4 /* UserRepository.swift in Sources */,
+				F17DB4572CD0F9EA009E2CC4 /* SwiftUI+Extension.swift in Sources */,
 				F17DB4472CCCD88E009E2CC4 /* FetchUserListUseCase.swift in Sources */,
+				F17DB4512CCE30CF009E2CC4 /* UserListFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
