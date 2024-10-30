@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ComposableArchitecture
+import Swinject
 
 struct UserListView: View {
     let store: StoreOf<UserListFeature>
@@ -98,9 +99,5 @@ private extension ScrollView {
 // MARK: - Preview
 
 #Preview {
-    UserListView(
-        store: Store(initialState: UserListFeature.State()) {
-            UserListFeature()
-        }
-    )
+    Assembler.shared.resolver.resolve(UserListView.self)
 }

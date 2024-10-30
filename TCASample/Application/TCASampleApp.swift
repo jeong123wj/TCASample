@@ -7,16 +7,20 @@
 
 import SwiftUI
 import ComposableArchitecture
+import Swinject
 
 @main
 struct TCASampleApp: App {
+    init() {
+        Assembler.shared.apply(assemblies: [
+            PresentationAssembly(),
+            DomainAssembly()
+        ])
+    }
+    
     var body: some Scene {
         WindowGroup {
-            UserListView(
-                store: Store(initialState: UserListFeature.State()) {
-                    UserListFeature()
-                }
-            )
+            Assembler.shared.resolver.resolve(UserListView.self)
         }
     }
 }

@@ -9,8 +9,8 @@ import ComposableArchitecture
 
 @Reducer
 struct UserListFeature {
-    let fetchUserListUseCase = FetchUserListUseCase(userRepository: MockUserRepository())
-    let updateFollowUseCase = UpdateFollowUseCase(userRepository: MockUserRepository())
+    let fetchUserListUseCase: FetchUserListUseCase
+    let updateFollowUseCase: UpdateFollowUseCase
     
     @ObservableState
     struct State: Equatable {

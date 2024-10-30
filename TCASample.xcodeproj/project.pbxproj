@@ -25,6 +25,9 @@
 		F17DB45C2CD188C0009E2CC4 /* UpdateFollowResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB45B2CD188C0009E2CC4 /* UpdateFollowResult.swift */; };
 		F17DB4612CD19E2B009E2CC4 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = F17DB4602CD19E2B009E2CC4 /* Swinject */; };
 		F17DB4632CD19E2B009E2CC4 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F17DB4622CD19E2B009E2CC4 /* Swinject-Dynamic */; };
+		F17DB4662CD1A619009E2CC4 /* Swinject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4652CD1A619009E2CC4 /* Swinject+Extension.swift */; };
+		F17DB4702CD23D5A009E2CC4 /* DomainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB46F2CD23D5A009E2CC4 /* DomainAssembly.swift */; };
+		F17DB4722CD26B83009E2CC4 /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4712CD26B83009E2CC4 /* PresentationAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		F17DB4562CD0F9EA009E2CC4 /* SwiftUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extension.swift"; sourceTree = "<group>"; };
 		F17DB4592CD1564F009E2CC4 /* UpdateFollowUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFollowUseCase.swift; sourceTree = "<group>"; };
 		F17DB45B2CD188C0009E2CC4 /* UpdateFollowResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFollowResult.swift; sourceTree = "<group>"; };
+		F17DB4652CD1A619009E2CC4 /* Swinject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swinject+Extension.swift"; sourceTree = "<group>"; };
+		F17DB46F2CD23D5A009E2CC4 /* DomainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainAssembly.swift; sourceTree = "<group>"; };
+		F17DB4712CD26B83009E2CC4 /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +124,11 @@
 		F17DB40E2CCCD287009E2CC4 /* TCASample */ = {
 			isa = PBXGroup;
 			children = (
-				F17DB40F2CCCD287009E2CC4 /* TCASampleApp.swift */,
+				F17DB4672CD23B33009E2CC4 /* Application */,
 				F17DB44C2CCE2F8C009E2CC4 /* Presentation */,
 				F17DB43E2CCCD6F0009E2CC4 /* Domain */,
 				F17DB43D2CCCD6EB009E2CC4 /* Data */,
+				F17DB4642CD1A5BD009E2CC4 /* Swinject */,
 				F17DB4132CCCD289009E2CC4 /* Assets.xcassets */,
 				F17DB4152CCCD289009E2CC4 /* Preview Content */,
 			);
@@ -229,6 +236,32 @@
 				F17DB4562CD0F9EA009E2CC4 /* SwiftUI+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F17DB4642CD1A5BD009E2CC4 /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+				F17DB4652CD1A619009E2CC4 /* Swinject+Extension.swift */,
+			);
+			path = Swinject;
+			sourceTree = "<group>";
+		};
+		F17DB4672CD23B33009E2CC4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F17DB4682CD23B54009E2CC4 /* Assembly */,
+				F17DB40F2CCCD287009E2CC4 /* TCASampleApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F17DB4682CD23B54009E2CC4 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F17DB4712CD26B83009E2CC4 /* PresentationAssembly.swift */,
+				F17DB46F2CD23D5A009E2CC4 /* DomainAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,9 +406,12 @@
 				F17DB44F2CCE2FF7009E2CC4 /* UserListView.swift in Sources */,
 				F17DB44B2CCCD9C7009E2CC4 /* MockUserRepository.swift in Sources */,
 				F17DB45C2CD188C0009E2CC4 /* UpdateFollowResult.swift in Sources */,
+				F17DB4702CD23D5A009E2CC4 /* DomainAssembly.swift in Sources */,
 				F17DB4102CCCD287009E2CC4 /* TCASampleApp.swift in Sources */,
+				F17DB4662CD1A619009E2CC4 /* Swinject+Extension.swift in Sources */,
 				F17DB4452CCCD808009E2CC4 /* User.swift in Sources */,
 				F17DB4492CCCD9A8009E2CC4 /* UserRepository.swift in Sources */,
+				F17DB4722CD26B83009E2CC4 /* PresentationAssembly.swift in Sources */,
 				F17DB4572CD0F9EA009E2CC4 /* SwiftUI+Extension.swift in Sources */,
 				F17DB4472CCCD88E009E2CC4 /* FetchUserListUseCase.swift in Sources */,
 				F17DB4512CCE30CF009E2CC4 /* UserListFeature.swift in Sources */,
