@@ -21,7 +21,7 @@ struct UserListFeature {
         case viewAppear
         case fetchUserListResponse(userList: [User])
         case followButtonTapped(user: User)
-        case followResponse(updateFollowResult: UpdateFollowResult)
+        case updateFollowResponse(updateFollowResult: UpdateFollowResult)
     }
     
     var body: some Reducer<State, Action> {
@@ -40,10 +40,10 @@ struct UserListFeature {
             case let .followButtonTapped(user):
                 return .run { send in
                     let updateFollowResult = try await self.updateFollowUseCase.execute(userId: user.id, isFollowing: !user.isFollowing)
-                    await send(.followResponse(updateFollowResult: updateFollowResult))
+                    await send(.updateFollowResponse(updateFollowResult: updateFollowResult))
                 }
                 
-            case let .followResponse(updateFollowResult):
+            case let .updateFollowResponse(updateFollowResult):
                 if let index = state.userArray.firstIndex(where: { $0.id == updateFollowResult.id }) {
                     let user = state.userArray[index]
                     state.userArray[index] = User(id: user.id, name: user.name, image: user.image, isFollowing: updateFollowResult.isFollowing)
