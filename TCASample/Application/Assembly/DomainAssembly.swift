@@ -21,7 +21,7 @@ class DomainAssembly: Assembly {
         }
         
         container.register(UserRepository.self) { resolver in
-            return MockUserRepository()
+            return FakeUserRepository()
         }
         .inObjectScope(.container)
     }

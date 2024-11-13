@@ -1,5 +1,5 @@
 //
-//  MockUserRepository.swift
+//  FakeUserRepository.swift
 //  TCASample
 //
 //  Created by Woojin on 10/26/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MockUserRepository: UserRepository {
+class FakeUserRepository: UserRepository {
     func fetchUserList() async throws -> [User] {
         return [
             User(id: UUID().uuidString, name: "James", image: "UserImage01", isFollowing: true),
