@@ -12,12 +12,12 @@ class DomainAssembly: Assembly {
     func assemble(container: Container) {
         container.register(FetchUserListUseCase.self) { resolver in
             let userRepository = resolver.resolve(UserRepository.self)!
-            return FetchUserListUseCase(userRepository: userRepository)
+            return DefaultFetchUserListUseCase(userRepository: userRepository)
         }
         
         container.register(UpdateFollowUseCase.self) { resolver in
             let userRepository = resolver.resolve(UserRepository.self)!
-            return UpdateFollowUseCase(userRepository: userRepository)
+            return DefaultUpdateFollowUseCase(userRepository: userRepository)
         }
         
         container.register(UserRepository.self) { resolver in

@@ -7,14 +7,6 @@
 
 import Foundation
 
-class FetchUserListUseCase {
-    private let userRepository: UserRepository
-    
-    init(userRepository: UserRepository) {
-        self.userRepository = userRepository
-    }
-    
-    func execute() async throws -> [User] {
-        return try await self.userRepository.fetchUserList()
-    }
+protocol FetchUserListUseCase {
+    func execute() async throws -> [User]
 }

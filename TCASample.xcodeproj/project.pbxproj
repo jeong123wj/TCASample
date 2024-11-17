@@ -28,6 +28,8 @@
 		F17DB4662CD1A619009E2CC4 /* Swinject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4652CD1A619009E2CC4 /* Swinject+Extension.swift */; };
 		F17DB4702CD23D5A009E2CC4 /* DomainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB46F2CD23D5A009E2CC4 /* DomainAssembly.swift */; };
 		F17DB4722CD26B83009E2CC4 /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4712CD26B83009E2CC4 /* PresentationAssembly.swift */; };
+		F1AE567A2CEA2710004FC014 /* DefaultFetchUserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE56792CEA2710004FC014 /* DefaultFetchUserListUseCase.swift */; };
+		F1AE567C2CEA2719004FC014 /* DefaultUpdateFollowUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE567B2CEA2719004FC014 /* DefaultUpdateFollowUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		F17DB4652CD1A619009E2CC4 /* Swinject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swinject+Extension.swift"; sourceTree = "<group>"; };
 		F17DB46F2CD23D5A009E2CC4 /* DomainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainAssembly.swift; sourceTree = "<group>"; };
 		F17DB4712CD26B83009E2CC4 /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
+		F1AE56792CEA2710004FC014 /* DefaultFetchUserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFetchUserListUseCase.swift; sourceTree = "<group>"; };
+		F1AE567B2CEA2719004FC014 /* DefaultUpdateFollowUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUpdateFollowUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,7 @@
 			children = (
 				F17DB4462CCCD88E009E2CC4 /* FetchUserListUseCase.swift */,
 				F17DB4592CD1564F009E2CC4 /* UpdateFollowUseCase.swift */,
+				F1AE56782CEA26D1004FC014 /* DefaultImpl */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -262,6 +267,15 @@
 				F17DB46F2CD23D5A009E2CC4 /* DomainAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F1AE56782CEA26D1004FC014 /* DefaultImpl */ = {
+			isa = PBXGroup;
+			children = (
+				F1AE56792CEA2710004FC014 /* DefaultFetchUserListUseCase.swift */,
+				F1AE567B2CEA2719004FC014 /* DefaultUpdateFollowUseCase.swift */,
+			);
+			path = DefaultImpl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +424,8 @@
 				F17DB4102CCCD287009E2CC4 /* TCASampleApp.swift in Sources */,
 				F17DB4662CD1A619009E2CC4 /* Swinject+Extension.swift in Sources */,
 				F17DB4452CCCD808009E2CC4 /* User.swift in Sources */,
+				F1AE567A2CEA2710004FC014 /* DefaultFetchUserListUseCase.swift in Sources */,
+				F1AE567C2CEA2719004FC014 /* DefaultUpdateFollowUseCase.swift in Sources */,
 				F17DB4492CCCD9A8009E2CC4 /* UserRepository.swift in Sources */,
 				F17DB4722CD26B83009E2CC4 /* PresentationAssembly.swift in Sources */,
 				F17DB4572CD0F9EA009E2CC4 /* SwiftUI+Extension.swift in Sources */,
