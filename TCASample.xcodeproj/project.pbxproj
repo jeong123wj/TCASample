@@ -30,6 +30,8 @@
 		F17DB4722CD26B83009E2CC4 /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DB4712CD26B83009E2CC4 /* PresentationAssembly.swift */; };
 		F1AE567A2CEA2710004FC014 /* DefaultFetchUserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE56792CEA2710004FC014 /* DefaultFetchUserListUseCase.swift */; };
 		F1AE567C2CEA2719004FC014 /* DefaultUpdateFollowUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE567B2CEA2719004FC014 /* DefaultUpdateFollowUseCase.swift */; };
+		F1AE567E2CEB2081004FC014 /* StubFetchUserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE567D2CEB2081004FC014 /* StubFetchUserListUseCase.swift */; };
+		F1AE56802CEB2092004FC014 /* StubUpdateFollowUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE567F2CEB2092004FC014 /* StubUpdateFollowUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		F17DB4712CD26B83009E2CC4 /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
 		F1AE56792CEA2710004FC014 /* DefaultFetchUserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFetchUserListUseCase.swift; sourceTree = "<group>"; };
 		F1AE567B2CEA2719004FC014 /* DefaultUpdateFollowUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUpdateFollowUseCase.swift; sourceTree = "<group>"; };
+		F1AE567D2CEB2081004FC014 /* StubFetchUserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubFetchUserListUseCase.swift; sourceTree = "<group>"; };
+		F1AE567F2CEB2092004FC014 /* StubUpdateFollowUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUpdateFollowUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				F17DB4202CCCD289009E2CC4 /* TCASampleTests.swift */,
+				F1AE567D2CEB2081004FC014 /* StubFetchUserListUseCase.swift */,
+				F1AE567F2CEB2092004FC014 /* StubUpdateFollowUseCase.swift */,
 			);
 			path = TCASampleTests;
 			sourceTree = "<group>";
@@ -440,6 +446,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17DB4212CCCD289009E2CC4 /* TCASampleTests.swift in Sources */,
+				F1AE56802CEB2092004FC014 /* StubUpdateFollowUseCase.swift in Sources */,
+				F1AE567E2CEB2081004FC014 /* StubFetchUserListUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
